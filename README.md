@@ -1,47 +1,45 @@
-# Astro Starter Kit: Minimal
+# Frontend Mentor - Calculator app solution
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Table of contents
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+- [Author](#author)
+## Overview
 
-## 🚀 Project Structure
+### The challenge
 
-Inside of your Astro project, you'll see the following folders and files:
+Users should be able to:
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- See the size of the elements adjust based on their device's screen size
+- Perform mathmatical operations like addition, subtraction, multiplication, and division
+- Adjust the color theme based on their preference
+- **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Screenshot
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+![](./screenshot.png) 
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Links
 
-## 🧞 Commands
+- Solution URL: [Github](https://github.com/TwoZer00/calculator-app-main)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-All commands are run from the root of the project, from a terminal:
+## My process
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Built with
 
-## 👀 Want to learn more?
+- Semantic HTML5 markup
+- [Tailwind](https://tailwindcss.com/)
+- [Astro](https://astro.build/)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Author
+
+- Website - [twozer00.dev](https://twozer00.dev)
+- Frontend Mentor - [@Two-Zer00](https://www.frontendmentor.io/profile/TwoZer00)
