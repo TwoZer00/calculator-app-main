@@ -5,18 +5,20 @@ import "../styles/global.css";
 ---
 
 <Main title="Calculator app">
-  <div class="flex flex-col w-[34rem] h-[44.4rem] gap-7.5 rounded-2xl">
+  <div
+    class="flex flex-col sm:w-[34rem] sm:h-[44.4rem] w-[20.4rem] sm:gap-7.5 gap-[1.9rem] rounded-2xl h-full"
+  >
     <Header />
     <form class="flex flex-col gap-6 h-full">
       <div
         id="display"
-        class="bg-[var(--color-bluea-3)] text-[var(--color-text-1)] rounded-xl w-full text-[3.4rem] p-9 font-bold text-right overflow-x-auto whitespace-nowrap overflow-y-hidden scroll"
+        class="bg-[var(--color-bluea-3)] text-[var(--color-text-1)] rounded-xl w-full sm:text-[3.4rem] text-[2.4rem] py-4 px-6 sm:p-9 font-bold text-right overflow-x-auto whitespace-nowrap overflow-y-hidden scroll"
       >
         399,981
       </div>
       <div
         id="keyboard"
-        class="grid grid-flow-rows h-full grid-cols-4 gap-6 text-4xl bg-[var(--color-bluea-2)] p-8 rounded-xl text-[var(--color-key-1)] font-bold"
+        class="grid grid-flow-rows h-full grid-cols-4 sm:gap-6 gap-3 text-4xl bg-[var(--color-bluea-2)] p-8 rounded-xl text-[var(--color-key-1)] font-bold"
       >
         <button
           type="button"
