@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import "tailwindcss";
+/* @theme {
+  --font-sans: "League Spartan", sans-serif;
+  --color-bluea-1: hsl(222, 26%, 31%);
+  --color-bluea-2: hsl(223, 31%, 20%);
+  --color-bluea-3: hsl(224, 36%, 15%);
+  --color-bluea-4: hsl(225, 21%, 49%);
+  --color-bluea-5: hsl(224, 28%, 35%);
+
+  
+  --color-reda-1: hsl(6, 63%, 50%);
+  --color-reda-2: hsl(6, 70%, 34%);
+
+  --color-orangea-1:hsl(30, 25%, 89%);
+  --color-orangea-2:hsl(28, 16%, 65%);
+
+  --color-graya-1: hsl(221, 14%, 31%);
+  --color-whitea-1: hsl(0, 0%, 100%);
+
+  
+
+} */
+
+@layer base{
+  :root{
+    --font-sans: "League Spartan", sans-serif;
+  }
+  .theme-1{
+    
+    --color-bluea-1: hsl(222, 26%, 31%);
+    --color-bluea-2: hsl(223, 31%, 20%);
+    --color-bluea-3: hsl(224, 36%, 15%);
+    --color-bluea-4: hsl(225, 21%, 49%);
+    --color-bluea-5: hsl(224, 28%, 35%);
+
+    
+    --color-reda-1: hsl(6, 63%, 50%);
+    --color-reda-2: hsl(6, 70%, 34%);
+
+    --color-orangea-1:hsl(30, 25%, 89%);
+    --color-orangea-2:hsl(28, 16%, 65%);
+
+    --color-graya-1: hsl(221, 14%, 31%);
+    --color-whitea-1: hsl(0, 0%, 100%);
+    --color-text-1: var(--color-whitea-1);
+    --color-key-1: var(--color-graya-1);
+    --color-key-equal-1: var(--color-whitea-1);
+  }
+  .theme-2{
+    --color-bluea-1: hsl(0, 0%, 90%);
+    --color-bluea-2: hsl(0, 5%, 81%);
+    --color-bluea-3: hsl(0, 0%, 93%);
+    --color-bluea-4: hsl(185, 42%, 37%);
+    --color-bluea-5: hsl(185, 58%, 25%);
+
+    
+    --color-reda-1: hsl(25, 98%, 40%);
+    --color-reda-2: hsl(25, 99%, 27%);
+
+    --color-orangea-1:hsl(45, 7%, 89%);
+    --color-orangea-2:hsl(35, 11%, 61%);
+
+    --color-graya-1: hsl(60, 10%, 19%);
+    --color-whitea-1: hsl(0, 0%, 100%);
+    --color-text-1: var(--color-graya-1);
+    --color-key-1: var(--color-graya-1);
+    --color-key-equal-1: var(--color-whitea-1);    
+  }
+  .theme-3{
+    --color-bluea-1: hsl(268, 75%, 9%);
+    --color-bluea-2: hsl(268, 71%, 12%);
+    --color-bluea-3: hsl(268, 71%, 12%);
+    --color-bluea-4: hsl(281, 89%, 26%);
+    --color-bluea-5: hsl(285, 91%, 52%);
+
+    
+    --color-reda-1: hsl(176, 100%, 44%);
+    --color-reda-2: hsl(177, 92%, 70%);
+
+    --color-orangea-1:hsl(268, 47%, 21%);
+    --color-orangea-2:hsl(290, 70%, 36%);
+
+    --color-graya-1: hsl(52, 100%, 62%);
+    --color-graya-2: hsl(198, 20%, 13%);
+    --color-whitea-1: hsl(0, 0%, 100%);
+    --color-text-1: var(--color-graya-1);
+    --color-key-1: var(--color-graya-1);
+    --color-key-equal-1: var(--color-graya-2);
+  }
+}

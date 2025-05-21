@@ -1,16 +1,159 @@
 ---
-
+import Header from "../components/Header.astro";
+import Main from "../layouts/Main.astro";
+import "../styles/global.css";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Main title="Calculator app">
+  <div class="flex flex-col w-[34rem] h-[44.4rem] gap-7.5 rounded-2xl">
+    <Header />
+    <form class="flex flex-col gap-6 h-full">
+      <div
+        id="display"
+        class="bg-[var(--color-bluea-3)] text-[var(--color-text-1)] rounded-xl w-full text-[3.4rem] p-9 font-bold text-right overflow-x-auto whitespace-nowrap overflow-y-hidden scroll"
+      >
+        399,981
+      </div>
+      <div
+        id="keyboard"
+        class="grid grid-flow-rows h-full grid-cols-4 gap-6 text-4xl bg-[var(--color-bluea-2)] p-8 rounded-xl text-[var(--color-key-1)] font-bold"
+      >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] hover:filter hover:brightness-125 hover:cursor-pointer rounded-xl border-b-4 border-[var(--color-orangea-2)]"
+          >7</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >8</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >9</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-bluea-4)] rounded-xl uppercase text-3xl border-b-4 border-[var(--color-bluea-5)] hover:filter hover:brightness-125 hover:cursor-pointer text-[var(--color-whitea-1)]"
+          >del</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >4</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >5</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >6</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >+</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >1</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >2</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >3</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >-</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >.</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >0</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >/</button
+        >
+        <button
+          type="button"
+          class="bg-[var(--color-orangea-1)] rounded-xl border-b-4 border-[var(--color-orangea-2)] hover:filter hover:brightness-125 hover:cursor-pointer"
+          >x</button
+        >
+        <button
+          type="button"
+          class="col-span-2 bg-[var(--color-bluea-4)] rounded-xl hover:filter hover:brightness-125 hover:cursor-pointer uppercase text-[var(--color-whitea-1)] text-3xl border-b-4 border-[var(--color-bluea-5)]"
+          >reset</button
+        >
+        <button
+          type="button"
+          class="col-span-2 hover:filter hover:brightness-125 hover:cursor-pointer bg-[var(--color-reda-1)] border-b-4 border-[var(--color-reda-2)] rounded-xl text-[var(--color-key-equal-1)]"
+          >&equals;</button
+        >
+      </div>
+    </form>
+  </div>
+  <script>
+    import Decimal from "decimal.js";
+    const keyboard = document.querySelector("#keyboard");
+    let operation = [];
+    keyboard?.addEventListener("click", (e) => {
+      const val = e.target.innerHTML;
+      const display = document.querySelector("#display");
+      if (!isNaN(Number(val))) {
+        const currentValue = display.innerText.replace(/,/g, "");
+        const newValue = currentValue + val;
+        display.innerText = new Decimal(newValue)
+          .toNumber()
+          .toLocaleString("en-US");
+        display.scrollLeft = display.scrollWidth;
+      } else {
+        if (val === "+" || val === "-" || val === "x" || val === "/") {
+          operation.push(new Decimal(display.innerText.replace(/,/g, "")));
+          operation.push(val === "x" ? "*" : val);
+          display.innerText = 0;
+        } else if (val === "=") {
+          operation.push(new Decimal(display.innerText.replace(/,/g, "")));
+          operation.push(val);
+          console.info(operation.slice(0, operation.length - 1).join(""));
+          display.innerText = eval(
+            operation.slice(0, operation.length - 1).join("")
+          ).toLocaleString("en-US");
+          operation = [];
+        } else if (val === ".") {
+          const currentValue = display.innerText.replace(/,/g, "");
+          const newValue = currentValue + ".";
+          // console.log(newValue);
+          display.innerText = newValue;
+        } else if (val === "reset") {
+          display.innerText = "0";
+          operation = [];
+        } else if (val === "del") {
+          const currentValue = display.innerText.replace(/,/g, "");
+          const newValue = currentValue.slice(0, -1);
+          display.innerText = new Decimal(newValue)
+            .toNumber()
+            .toLocaleString("en-US");
+        }
+      }
+    });
+  </script>
+</Main>

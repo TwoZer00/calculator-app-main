@@ -1,0 +1,47 @@
+<div class="flex flex-row items-center text-[var(--color-text-1)]">
+  <h1 class="flex-1 text-3xl lowercase font-bold ml-2 mt-2.5">calc</h1>
+  <div class="flex-none flex flex-row items-center gap-8">
+    <p class="uppercase font-bold text-sm mt-4">theme</p>
+    <div class="relative flex flex-col">
+      <div
+        id="theme-selector"
+        class="flex flex-row justify-around font-semibold text-sm gap-2"
+      >
+        <label>
+          1
+          <input
+            type="radio"
+            name="theme"
+            class="hidden peer/1"
+            checked
+            value="1"
+          />
+          <div
+            class="w-fit rounded-full h-4 bottom-1 absolute left-1 hidden peer-checked/1:inline aspect-square bg-[var(--color-reda-1)]"
+          >
+          </div>
+        </label>
+        <label>
+          2
+          <input type="radio" name="theme" class="hidden peer/2" value="2" />
+          <div
+            class="w-fit rounded-full h-4 left-1/2 -translate-x-1/2 bottom-1 absolute hidden peer-checked/2:inline aspect-square bg-[var(--color-reda-1)]"
+          >
+          </div>
+        </label>
+        <label>
+          3
+          <input type="radio" name="theme" class="hidden peer/3" value="3" />
+          <div
+            class="w-fit rounded-full h-4 rigth-1 -translate-x-full bottom-1 absolute hidden peer-checked/3:inline aspect-square bg-[var(--color-reda-1)]"
+          >
+          </div>
+        </label>
+      </div>
+      <div
+        class="bg-[var(--color-bluea-2)] w-[4.5rem] h-6 rounded-full px-1 flex items-center"
+      >
+      </div>
+    </div>
+  </div>
+</div>
